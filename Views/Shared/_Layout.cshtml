@@ -1,0 +1,493 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="Content/components.css">
+    <link rel="stylesheet" href="Content/responsee.css">
+    <link rel="stylesheet" href="Content/template-style.css">
+    <script type="text/javascript" src="js/responsee.js"></script>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class ="size-1140 align-content-left ">
+
+    <div id="header">
+        <h1>Bike & Fun Shop</h1>
+        <ul id="navlist">
+            <li class="first"><a href="/" id="current">Home</a></li>
+            <li><a href="/Store/">Store</a></li>
+        </ul>
+
+    </div>
+
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+    @*<div class="line">
+        <div id="content-wrapper">
+            <div class="l-2 s-2">
+                <div class="aside-nav">
+                    <div class="logo-box">
+                        <img class="center" style=width:60% src="Content/images/logo_inv1.png">
+                    </div>
+                    <ul class="chevron">
+                        <li><a class="hide-s"><p class="hide-s">Fährräder</p><i class="icon-bike icon2x-res hide-l center"></i></a></li>
+                        <li><a class="hide-s"><p class="hide-s">Zubehör</p><i class="icon-gears icon2x-res hide-l center"></i></a></li>
+                        <li><a class="hide-s"><p class="hide-s">Kleidung</p><i class="icon-t-shirt icon2x-res hide-l center"></i></a></li>
+                        <li><a class="hide-s"><p class="hide-s">Werkstatt</p><i class="icon-tools icon2x-res hide-l center"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="l-10 s-10">
+
+                <div class="l-12 s-12">
+                    <div class="top-nav">
+                        <nav class="cl-effect-5">
+                            <a href="#"><span data-hover="HOME">HOME</span></a>
+                            <a href="#"><span data-hover="STORE">STORE</span></a>
+                            <a href="contact.html"><span data-hover="KONTAKT">KONTAKT</span></a>
+                            <a href="#"><span data-hover="ABOUT">ABOUT</span></a>
+                        </nav>
+                    </div>
+
+                    <img class="l-12 s-12" src="Content/images/header.jpg">
+                    <div class="l-12 s-12 menu">
+                        <div class="l-1 s-3 menu red" id="border-right">
+                            <i class="padding icon-tags icon2x center i-white"></i>
+                        </div>
+                        <div class="s-3 hide-l" id="border-right">
+                            <i class="padding icon-search1 icon2x center i-white"></i>
+                        </div>
+
+                        <div class="l-3 s-3 hide-s menu red">
+                            <form class="customform l-12 hide-s" action="">
+                                <div>
+                                    <input type="main" placeholder="hier tippen.." title="Search form" />
+                                </div>
+                            </form>
+                            <div class="searchi">
+                                <a href=""><i class="icon-search2 i-white"></i></a>
+                            </div>
+                        </div>
+                        <div class="l-3 hide-s menu dark">
+                            <form class="customform" action="">
+                                <div>
+                                    <select form="select" name="">
+                                        <option value="first">Preis</option>
+                                        <option value="second">Farbe</option>
+                                        <option value="third">Beliebheit</option>
+                                        <option value="fourth">Aktualität</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="l-4 s-3 menu dark" id="cart">
+                            <a class="block" href=""><i class="icon-cart2 icon2x i-white"></i></a>
+                            <a class="block" href=""><div><p>(5)</p></div></a>
+                        </div>
+                        <div class="l-1 s-3 menu dark">
+                            <a class="block" href=""><i class="icon-list2 center padding icon2x i-white"></i></a>
+
+                        </div>
+                    </div>
+                    <div class="l-12 s-12 shop-bg">
+                        <div class="hide-s l-2">
+                            <div class=" l-3 rail"></div>
+                            <div class="bicon" id="bs1"></div>
+                            <div class="bicon" id="bs2"></div>
+                            <div class="bicon" id="bs3"></div>
+                            <div class="bicon" id="bs4"></div>
+                            <div class="bicon" id="bs5"></div>
+                        </div>
+                        <section class="s-12 l-10">
+                            <div class="box">
+                                <div class="s-12 l-4 tile">
+                                    <div class="flip">
+                                        <a href="details.html">
+                                            <div class="flip-front">
+                                                <img src="Content/images/bike6.png" />
+                                            </div>
+                                            <div class="flip-back">
+                                                <div class="image-overlay">
+                                                    <form class="customform" action="">
+                                                        <div class="s-12 l-2 add">
+                                                            <button type="add"><i class="icon-cart2 i-white"></i></button>
+                                                        </div>
+                                                    </form>
+                                                    <img class="img-inv" src="Content/images/bike6.png" />
+                                                    <div class="details">
+                                                        <h1>Details</h1>
+                                                        <ul>
+                                                            <li>Preis</li>
+                                                            <li>Farbe</li>
+                                                            <li>Gewicht</li>
+                                                            <li>Extras</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="s-12 l-4 tile">
+                                    <div class="flip">
+                                        <a href="#">
+                                            <div class="flip-front">
+                                                <img src="Content/images/bike7.png" />
+                                            </div>
+                                            <div class="flip-back">
+                                                <div class="image-overlay">
+                                                    <form class="customform" action="">
+                                                        <div class="s-12 l-2 add">
+                                                            <button type="add"><i class="icon-cart2 i-white"></i></button>
+                                                        </div>
+                                                    </form>
+                                                    <img class="img-inv" src="Content/images/bike7.png" />
+                                                    <div class="details">
+                                                        <h1>Details</h1>
+                                                        <ul>
+                                                            <li>Preis</li>
+                                                            <li>Farbe</li>
+                                                            <li>Gewicht</li>
+                                                            <li>Extras</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="s-12 l-4 tile">
+                                    <div class="flip">
+                                        <a href="#">
+                                            <div class="flip-front">
+                                                <img src="Content/images/bike1.png" />
+                                            </div>
+                                            <div class="flip-back">
+                                                <div class="image-overlay">
+                                                    <form class="customform" action="">
+                                                        <div class="s-12 l-2 add">
+                                                            <button type="add"><i class="icon-cart2 i-white"></i></button>
+                                                        </div>
+                                                    </form>
+                                                    <img class="img-inv" src="Content/images/bike1.png" />
+                                                    <div class="details">
+                                                        <h1>Details</h1>
+                                                        <ul>
+                                                            <li>Preis</li>
+                                                            <li>Farbe</li>
+                                                            <li>Gewicht</li>
+                                                            <li>Extras</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="s-12 l-4 tile">
+                                    <div class="flip">
+                                        <a href="#">
+                                            <div class="flip-front">
+                                                <img src="Content/images/bike2.png" />
+                                            </div>
+                                            <div class="flip-back">
+                                                <div class="image-overlay">
+                                                    <form class="customform" action="">
+                                                        <div class="s-12 l-2 add">
+                                                            <button type="add"><i class="icon-cart2 i-white"></i></button>
+                                                        </div>
+                                                    </form>
+                                                    <img class="img-inv" src="Content/images/bike2.png" />
+                                                    <div class="details">
+                                                        <h1>Details</h1>
+                                                        <ul>
+                                                            <li>Preis</li>
+                                                            <li>Farbe</li>
+                                                            <li>Gewicht</li>
+                                                            <li>Extras</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="s-12 l-4 tile">
+                                    <div class="flip">
+                                        <a href="#">
+                                            <div class="flip-front">
+                                                <img src="Content/images/bike3.png" />
+                                            </div>
+                                            <div class="flip-back">
+                                                <div class="image-overlay">
+                                                    <form class="customform" action="">
+                                                        <div class="s-12 l-2 add">
+                                                            <button type="add"><i class="icon-cart2 i-white"></i></button>
+                                                        </div>
+                                                    </form>
+                                                    <img class="img-inv" src="Content/images/bike3.png" />
+                                                    <div class="details">
+                                                        <h1>Details</h1>
+                                                        <ul>
+                                                            <li>Preis</li>
+                                                            <li>Farbe</li>
+                                                            <li>Gewicht</li>
+                                                            <li>Extras</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="s-12 l-4 tile">
+                                    <div class="flip">
+                                        <a href="#">
+                                            <div class="flip-front">
+                                                <img src="Content/images/bike3.png" />
+                                            </div>
+                                            <div class="flip-back">
+                                                <div class="image-overlay">
+                                                    <form class="customform" action="">
+                                                        <div class="s-12 l-2 add">
+                                                            <button type="add"><i class="icon-cart2 i-white"></i></button>
+                                                        </div>
+                                                    </form>
+                                                    <img class="img-inv" src="Content/images/bike3.png" />
+                                                    <div class="details">
+                                                        <h1>Details</h1>
+                                                        <ul>
+                                                            <li>Preis</li>
+                                                            <li>Farbe</li>
+                                                            <li>Gewicht</li>
+                                                            <li>Extras</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="s-12 l-4 tile">
+                                    <div class="flip">
+                                        <a href="#">
+                                            <div class="flip-front">
+                                                <img src="Content/images/bike5.png" />
+                                            </div>
+                                            <div class="flip-back">
+                                                <div class="image-overlay">
+                                                    <form class="customform" action="">
+                                                        <div class="s-12 l-2 add">
+                                                            <button type="add"><i class="icon-cart2 i-white"></i></button>
+                                                        </div>
+                                                    </form>
+                                                    <img class="img-inv" src="Content/images/bike5.png" />
+                                                    <div class="details">
+                                                        <h1>Details</h1>
+                                                        <ul>
+                                                            <li>Preis</li>
+                                                            <li>Farbe</li>
+                                                            <li>Gewicht</li>
+                                                            <li>Extras</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="s-12 l-4 tile">
+                                    <div class="flip">
+                                        <a href="#">
+                                            <div class="flip-front">
+                                                <img src="Content/images/bike6.png" />
+                                            </div>
+                                            <div class="flip-back">
+
+                                                <div class="image-overlay">
+                                                    <form class="customform" action="">
+                                                        <div class="s-12 l-2 add">
+                                                            <button type="add"><i class="icon-cart2 i-white"></i></button>
+                                                        </div>
+                                                    </form>
+                                                    <img class="img-inv" src="Content/images/bike6.png" />
+                                                    <div class="details">
+                                                        <h1>Details</h1>
+                                                        <ul>
+                                                            <li>Preis</li>
+                                                            <li>Farbe</li>
+                                                            <li>Gewicht</li>
+                                                            <li>Extras</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="s-12 l-4 tile">
+                                    <div class="flip">
+                                        <a href="details">
+                                            <div class="flip-front">
+                                                <img src="Content/images/bike7.png" />
+                                            </div>
+                                            <div class="flip-back">
+                                                <div class="image-overlay">
+                                                    <form class="customform" action="">
+                                                        <div class="s-12 l-2 add">
+                                                            <button type="add"><i class="icon-cart2 i-white"></i></button>
+                                                        </div>
+                                                    </form>
+                                                    <img class="img-inv" src="Content/images/bike7.png" />
+                                                    <div class="details">
+                                                        <h1>Details</h1>
+                                                        <ul>
+                                                            <li>Preis</li>
+                                                            <li>Farbe</li>
+                                                            <li>Gewicht</li>
+                                                            <li>Extras</li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="s-12 l-4 tile">
+                                    <div class="flip">
+                                        <a href="#">
+                                            <div class="flip-front">
+                                                <img src="Content/images/bike7.png" />
+                                            </div>
+                                            <div class="flip-back">
+                                                <div class="image-overlay">
+                                                    <form class="customform" action="">
+                                                        <div class="s-12 l-2 add">
+                                                            <button type="add"><i class="icon-cart2 i-white"></i></button>
+                                                        </div>
+                                                    </form>
+                                                    <img class="img-inv" src="Content/images/bike7.png" />
+                                                    <div class="details">
+                                                        <h1>Details</h1>
+                                                        <ul>
+                                                            <li>Preis</li>
+                                                            <li>Farbe</li>
+                                                            <li>Gewicht</li>
+                                                            <li>Extras</li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="s-12 l-4 tile">
+                                    <div class="flip">
+                                        <a href="#">
+                                            <div class="flip-front">
+                                                <img src="Content/images/bike7.png" />
+                                            </div>
+                                            <div class="flip-back">
+                                                <div class="image-overlay">
+                                                    <form class="customform" action="">
+                                                        <div class="s-12 l-2 add">
+                                                            <button type="add"><i class="icon-cart2 i-white"></i></button>
+                                                        </div>
+                                                    </form>
+                                                    <img class="img-inv" src="Content/images/bike7.png" />
+                                                    <div class="details">
+                                                        <h1>Details</h1>
+                                                        <ul>
+                                                            <li>Preis</li>
+                                                            <li>Farbe</li>
+                                                            <li>Gewicht</li>
+                                                            <li>Extras</li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="s-12 l-4 tile">
+                                    <div class="flip">
+                                        <a href="#">
+                                            <div class="flip-front">
+                                                <img src="Content/images/bike7.png" />
+                                            </div>
+                                            <div class="flip-back">
+                                                <div class="image-overlay">
+                                                    <form class="customform" action="">
+                                                        <div class="s-12 l-2 add">
+                                                            <button type="add"><i class="icon-cart2 i-white"></i></button>
+                                                        </div>
+                                                    </form>
+                                                    <img class="img-inv" src="Content/images/bike7.png" />
+                                                    <div class="details">
+                                                        <h1>Details</h1>
+                                                        <ul>
+                                                            <li>Preis</li>
+                                                            <li>Farbe</li>
+                                                            <li>Gewicht</li>
+                                                            <li>Extras</li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="s-12 l-4 tile">
+                                    <div class="flip">
+                                        <a href="#">
+                                            <div class="flip-front">
+                                                <img src="Content/images/bike7.png" />
+                                            </div>
+                                            <div class="flip-back">
+                                                <div class="image-overlay">
+                                                    <form class="customform" action="">
+                                                        <div class="s-12 l-2 add">
+                                                            <button type="add"><i class="icon-cart2 i-white"></i></button>
+                                                        </div>
+                                                    </form>
+                                                    <img class="img-inv" src="Content/images/bike7.png" />
+                                                    <div class="details">
+                                                        <h1>Details</h1>
+                                                        <ul>
+                                                            <li>Preis</li>
+                                                            <li>Farbe</li>
+                                                            <li>Gewicht</li>
+                                                            <li>Extras</li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="line"></footer>*@
+
+
+</body>
+</html>

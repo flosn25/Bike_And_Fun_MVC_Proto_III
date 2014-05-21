@@ -1,0 +1,29 @@
+﻿@model Bike_And_Fun_MVC_Proto_III.Models.Type
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Type</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.typeName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.typeName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.typeArtUrl)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.typeArtUrl)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.typeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

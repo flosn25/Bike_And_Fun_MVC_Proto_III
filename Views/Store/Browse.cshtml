@@ -1,0 +1,16 @@
+﻿@model Bike_And_Fun_MVC_Proto_III.Models.Category
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h2>Browsing Category: @Model.catName</h2>
+
+<ul>
+    @foreach (var type in Model.types)
+    {
+        <li>
+            @Html.ActionLink(type.typeName, "Details", new { id = type.typeId})
+        </li>
+    }
+</ul>
